@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siril Raj | Software Developer & Engineering Student</title>
+  <meta name="description" content="Portfolio of Siril Raj - 3rd Year B.Tech student at Andhra Loyola Institute of Engineering and Technology (ALIET). Java developer, DBMS enthusiast, fast typer, and problem solver." />
+  <meta name="keywords" content="Siril Raj, ALIET, Java Developer, DBMS, Andhra Loyola Institute of Engineering and Technology, Portfolio, Pathfinder, StudyPlan" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- Glowing Ambient Blur Orbs -->
+  <div class="ambient-orb orb-1" aria-hidden="true"></div>
+  <div class="ambient-orb orb-2" aria-hidden="true"></div>
+  <div class="ambient-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-outline" id="cursor-outline" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-code">&lt;</span>
+        <span class="brand-name">Siril Raj</span>
+        <span class="brand-code">/&gt;</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#typing-lab" class="nav-link">Typing Lab</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary">Hire Me</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-pill" data-reveal>
+            <span class="status-indicator"></span>
+            <span>B.Tech 3rd Year (1st Sem) • ALIET</span>
+          </div>
+
+          <h1 class="hero-title" data-reveal>
+            Hi, I'm <span class="gradient-text glow-text">Siril Raj</span>
+          </h1>
+
+          <div class="typewriter-container" data-reveal>
+            <span class="typewriter-prefix">I am a </span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+
+          <p class="hero-description" data-reveal>
+            Engineering student at <strong>Andhra Loyola Institute of Engineering and Technology (ALIET)</strong>.
+            Passionate about architecting clean <strong>Java</strong> solutions, engineering optimized <strong>DBMS</strong> schemas,
+            cracking complex algorithmic challenges, and relentlessly <strong>questioning</strong> how systems work down to the core.
+          </p>
+
+          <div class="hero-cta-group" data-reveal>
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#typing-lab" class="btn btn-outline">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="6" y2="8"/><line x1="10" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="14" y2="8"/><line x1="18" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/></svg>
+              <span>Test My Typing Speed</span>
+            </a>
+            <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+          </div>
+
+          <!-- Highlight Badges -->
+          <div class="hero-stats-grid" data-reveal>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">3rd Yr</div>
+              <div class="stat-label">ALIET Engineering</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">2+</div>
+              <div class="stat-label">Core Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">95+</div>
+              <div class="stat-label">WPM Typing Speed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number gradient-text">100%</div>
+              <div class="stat-label">Curiosity & Logic</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="avatar-card-wrapper">
+            <div class="avatar-card">
+              <div class="card-glow"></div>
+              <div class="avatar-inner">
+                <div class="code-badge">&lt;SR /&gt;</div>
+                <div class="avatar-circle">
+                  <div class="pulse-ring"></div>
+                  <div class="avatar-icon">
+                    <!-- Tech Shield Icon -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+                      <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                  </div>
+                </div>
+                <h3 class="avatar-name">Siril Raj</h3>
+                <p class="avatar-tag">Software Engineer in Training</p>
+                <div class="tech-pills">
+                  <span class="pill">Java</span>
+                  <span class="pill">DBMS</span>
+                  <span class="pill">Algorithms</span>
+                  <span class="pill">Speed Typing</span>
+                </div>
+                <div class="avatar-footer">
+                  <span class="location-tag">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Vijayawada, AP
+                  </span>
+                  <span class="status-online">
+                    <span class="online-dot"></span> Active Learner
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Micro-Badges -->
+            <div class="floating-badge badge-top-right">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>Clean Code</span>
+            </div>
+            <div class="floating-badge badge-bottom-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <span>Deep Inquirer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">Driven by Logic, Fueled by <span class="gradient-text">Curiosity</span></h2>
+          <p class="section-subtitle">Bridging strong foundational engineering principles with proactive problem solving.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card glass-card" data-reveal>
+            <div class="card-icon-header">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <h3>My Story</h3>
+            </div>
+            <p>
+              I am currently pursuing my <strong>B.Tech degree (3rd Year, 1st Semester)</strong> at 
+              <strong>Andhra Loyola Institute of Engineering and Technology (ALIET)</strong>. My passion lies in 
+              understanding how software systems execute beneath the surface—from core memory allocation and OOP paradigms 
+              in Java to transaction integrity and normalized schema design in Database Management Systems.
+            </p>
+            <p>
+              Prior to my engineering journey, I completed my intermediate education at <strong>Sri Akshara Junior College, Kanchikacherla</strong>, 
+              where I honed my fundamental analytical reasoning, mathematical models, and discipline.
+            </p>
+          </div>
+
+          <div class="about-card glass-card" data-reveal>
+            <div class="card-icon-header">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <h3>The Philosophy of Questioning</h3>
+            </div>
+            <p>
+              Many developers jump straight into coding; I believe exceptional engineering begins by <strong>asking the right questions</strong>.
+            </p>
+            <ul class="styled-list">
+              <li><strong>Why this data structure?</strong> Understanding trade-offs between memory, time complexity, and scaling limits.</li>
+              <li><strong>How will the database scale?</strong> Eliminating redundant queries, designing clean foreign keys, and indexing hotspots.</li>
+              <li><strong>Where can edge cases fail?</strong> Stress-testing boundaries before users ever touch the application.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">My Educational <span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle">Strong academic roots cultivating technical competence and analytical rigor.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: ALIET -->
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-badge">2023 - Present • Current (3rd Year, 1st Sem)</div>
+              <h3 class="timeline-title">Bachelor of Technology (B.Tech) - Engineering</h3>
+              <h4 class="timeline-institution">Andhra Loyola Institute of Engineering and Technology (ALIET)</h4>
+              <p class="timeline-description">
+                Immersed in comprehensive computer science and engineering coursework. Focusing intensely on 
+                Object-Oriented Programming (Java), Database Management Systems (DBMS), Data Structures & Algorithms, 
+                Computer Networks, and System Architecture.
+              </p>
+              <div class="timeline-tags">
+                <span>Java Programming</span>
+                <span>Relational Databases & SQL</span>
+                <span>Data Structures</span>
+                <span>System Design Basics</span>
+                <span>Software Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Sri Akshara Junior College -->
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot">
+              <div class="dot-inner"></div>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-badge">Intermediate Education</div>
+              <h3 class="timeline-title">Board of Intermediate Education (MPC)</h3>
+              <h4 class="timeline-institution">Sri Akshara Junior College, Kanchikacherla</h4>
+              <p class="timeline-description">
+                Completed pre-university education with an intensive focus on Mathematics, Physics, and Chemistry. 
+                Built the core logical deduction, mathematical rigor, and analytical mindset that fuels my everyday programming.
+              </p>
+              <div class="timeline-tags">
+                <span>Higher Mathematics</span>
+                <span>Physics & Mechanics</span>
+                <span>Analytical Reasoning</span>
+                <span>Problem Solving Foundations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+          <p class="section-subtitle">A balanced fusion of hard technical competencies and high-impact cognitive strengths.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill Card 1: Java -->
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-header">
+              <div class="skill-icon java-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3>Java</h3>
+                <span class="skill-level">Core Proficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Extensive grasp of Object-Oriented Programming (OOP), Collections framework, Exception Handling, 
+              Multithreading concepts, and algorithmic implementation.
+            </p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="--target-width: 88%;"></div>
+            </div>
+            <div class="skill-subtags">
+              <span>OOPs</span>
+              <span>Collections</span>
+              <span>Java Streams</span>
+              <span>Multi-threading</span>
+              <span>Clean Code</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 2: DBMS -->
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-header">
+              <div class="skill-icon dbms-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3>DBMS & SQL</h3>
+                <span class="skill-level">Relational Architecture</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Strong knowledge of Relational Database Management Systems, Entity-Relationship (ER) modeling, 
+              Normalization (1NF to BCNF), indexing, transactions (ACID properties), and complex SQL queries.
+            </p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="--target-width: 85%;"></div>
+            </div>
+            <div class="skill-subtags">
+              <span>SQL Queries</span>
+              <span>Normalization</span>
+              <span>ER Modeling</span>
+              <span>ACID Compliance</span>
+              <span>Indexing</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 3: Problem Solving -->
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-header">
+              <div class="skill-icon logic-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3>Problem Solving</h3>
+                <span class="skill-level">Algorithmic Mindset</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Breaking down complex, unstructured challenges into intuitive logical steps. Analyzing edge cases, 
+              optimizing algorithmic runtime complexity, and designing robust data flows.
+            </p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="--target-width: 90%;"></div>
+            </div>
+            <div class="skill-subtags">
+              <span>Data Structures</span>
+              <span>Algorithms</span>
+              <span>Optimization</span>
+              <span>Debugging</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 4: High-Speed Typing -->
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-header">
+              <div class="skill-icon typing-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="6" y1="8" x2="6" y2="8"/><line x1="10" y1="8" x2="10" y2="8"/><line x1="14" y1="8" x2="14" y2="8"/><line x1="18" y1="8" x2="18" y2="8"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="8" y1="16" x2="16" y2="16"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3>Rapid Typing Velocity</h3>
+                <span class="skill-level">95+ WPM Speed & Precision</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              High keystroke velocity with 98%+ accuracy. Allows rapid idea-to-code translation, quick terminal navigation, 
+              efficient documentation, and frictionless flow state while developing.
+            </p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="--target-width: 96%;"></div>
+            </div>
+            <div class="skill-subtags">
+              <span>Touch Typing</span>
+              <span>95+ WPM</span>
+              <span>High Accuracy</span>
+              <span>Rapid Prototyping</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 5: Inquisitive Questioning -->
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-header">
+              <div class="skill-icon question-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3>Inquisitive Questioning</h3>
+                <span class="skill-level">Root-Cause Analysis</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Never accepting superficial answers. Probing architectural decisions, asking "What happens under high load?", 
+              and uncovering hidden assumptions to eliminate software vulnerabilities early.
+            </p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="--target-width: 92%;"></div>
+            </div>
+            <div class="skill-subtags">
+              <span>Critical Thinking</span>
+              <span>System Inquiry</span>
+              <span>Edge Case Hunting</span>
+              <span>Curiosity</span>
+            </div>
+          </div>
+
+          <!-- Skill Card 6: Developer Tools -->
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-header">
+              <div class="skill-icon tools-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              </div>
+              <div class="skill-meta">
+                <h3>Tools & Environment</h3>
+                <span class="skill-level">Workflow Efficiency</span>
+              </div>
+            </div>
+            <p class="skill-desc">
+              Proficient with modern developer workflows, Git version control, IntelliJ IDEA, Eclipse, MySQL Workbench, 
+              and Linux/PowerShell command-line environments.
+            </p>
+            <div class="skill-progress-bar">
+              <div class="progress-fill" style="--target-width: 82%;"></div>
+            </div>
+            <div class="skill-subtags">
+              <span>IntelliJ IDEA</span>
+              <span>Git & GitHub</span>
+              <span>MySQL Workbench</span>
+              <span>CLI / Terminal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TYPING LAB WIDGET -->
+    <section class="section typing-lab-section" id="typing-lab">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Interactive Feature</span>
+          <h2 class="section-title">The <span class="gradient-text">Typing Lab</span> Challenge</h2>
+          <p class="section-subtitle">Since high-speed typing is one of my core strengths, can you match my speed? Take the 30-second live test!</p>
+        </div>
+
+        <div class="typing-game-card glass-card" data-reveal>
+          <div class="game-header">
+            <div class="game-status">
+              <span class="pulse-indicator"></span>
+              <span id="game-status-text">Ready to test your typing speed</span>
+            </div>
+            <div class="game-stats-row">
+              <div class="game-stat">
+                <span class="stat-title">TIME</span>
+                <span class="stat-val" id="time-left">30s</span>
+              </div>
+              <div class="game-stat">
+                <span class="stat-title">WPM</span>
+                <span class="stat-val highlight" id="live-wpm">0</span>
+              </div>
+              <div class="game-stat">
+                <span class="stat-title">ACCURACY</span>
+                <span class="stat-val" id="live-acc">100%</span>
+              </div>
+              <div class="game-stat">
+                <span class="stat-title">SCORE</span>
+                <span class="stat-val" id="live-score">0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prompt Box -->
+          <div class="game-text-display" id="words-container" tabindex="0">
+            <!-- Words dynamically injected -->
+          </div>
+
+          <!-- Input Area -->
+          <div class="game-input-container">
+            <input 
+              type="text" 
+              id="typing-input" 
+              class="typing-input-field" 
+              placeholder="Click here and start typing to begin the challenge..." 
+              autocomplete="off" 
+              autocorrect="off" 
+              autocapitalize="off" 
+              spellcheck="false"
+            />
+            <button class="btn btn-primary" id="restart-game-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              <span>Restart Test</span>
+            </button>
+          </div>
+
+          <!-- Result Modal / Banner -->
+          <div class="game-result-banner" id="game-result-banner">
+            <div class="result-celebration" id="result-icon">🏆</div>
+            <div class="result-details">
+              <h3 id="result-title">Great Run!</h3>
+              <p id="result-message">You achieved 85 WPM with 97% accuracy.</p>
+            </div>
+            <div class="siril-comparison-pill">
+              <span>Siril's Benchmark: <strong>95+ WPM</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Engineering <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world projects showcasing algorithmic thinking, clean Java design, and robust database architectures.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Pathfinder -->
+          <div class="project-card glass-card" data-reveal>
+            <div class="project-banner pathfinder-bg">
+              <div class="project-overlay"></div>
+              <div class="project-badge">Algorithm Visualizer</div>
+              <!-- Algorithmic Graph Graphic -->
+              <div class="banner-visual">
+                <svg viewBox="0 0 400 200" class="graph-svg" aria-hidden="true">
+                  <line x1="60" y1="100" x2="160" y2="50" stroke="#00f2fe" stroke-width="2" stroke-dasharray="4,4"/>
+                  <line x1="60" y1="100" x2="160" y2="150" stroke="#00f2fe" stroke-width="2"/>
+                  <line x1="160" y1="50" x2="260" y2="60" stroke="#7928ca" stroke-width="2"/>
+                  <line x1="160" y1="150" x2="260" y2="140" stroke="#00f2fe" stroke-width="3"/>
+                  <line x1="260" y1="140" x2="340" y2="100" stroke="#00f2fe" stroke-width="3"/>
+                  <circle cx="60" cy="100" r="16" fill="#00f2fe" filter="url(#glow)"/>
+                  <circle cx="160" cy="50" r="12" fill="#1e293b" stroke="#00f2fe" stroke-width="2"/>
+                  <circle cx="160" cy="150" r="14" fill="#00f2fe"/>
+                  <circle cx="260" cy="60" r="12" fill="#1e293b" stroke="#7928ca" stroke-width="2"/>
+                  <circle cx="260" cy="140" r="14" fill="#00f2fe"/>
+                  <circle cx="340" cy="100" r="18" fill="#7928ca"/>
+                  <text x="60" y="105" font-family="'JetBrains Mono'" font-size="10" fill="#0a0d14" text-anchor="middle" font-weight="bold">START</text>
+                  <text x="340" y="105" font-family="'JetBrains Mono'" font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">END</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Java</span>
+                <span>Graph Algorithms</span>
+                <span>Dijkstra / A*</span>
+                <span>Data Structures</span>
+              </div>
+              <h3 class="project-title">Pathfinder</h3>
+              <p class="project-description">
+                An interactive pathfinding algorithm visualizer and routing simulation. Designed to demonstrate 
+                how shortest-path graph traversals operate in real time over dynamic weighted grids with user-placed obstacles.
+              </p>
+
+              <div class="project-features">
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Dijkstra, A* Search & BFS/DFS traversal mechanics</span>
+                </div>
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Interactive wall placement & custom weight heuristics</span>
+                </div>
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Step-by-step traversal delay & visited node telemetry</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-modal-btn" data-project="pathfinder">
+                  <span>Explore Deep Dive</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </button>
+                <a href="#contact" class="btn btn-sm btn-ghost">Discuss Architecture</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: StudyPlan -->
+          <div class="project-card glass-card" data-reveal>
+            <div class="project-banner studyplan-bg">
+              <div class="project-overlay"></div>
+              <div class="project-badge">Academic Management & DBMS</div>
+              <!-- DBMS / Relational Table Graphic -->
+              <div class="banner-visual">
+                <svg viewBox="0 0 400 200" class="schema-svg" aria-hidden="true">
+                  <!-- Table 1: Students / Courses -->
+                  <rect x="50" y="30" width="130" height="90" rx="6" fill="#161b22" stroke="#4facfe" stroke-width="1.5"/>
+                  <rect x="50" y="30" width="130" height="24" rx="6" fill="#0052cc" opacity="0.8"/>
+                  <text x="115" y="47" font-family="'JetBrains Mono'" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">COURSES_TBL</text>
+                  <text x="60" y="70" font-family="'JetBrains Mono'" font-size="9" fill="#00f2fe">PK course_id</text>
+                  <text x="60" y="90" font-family="'JetBrains Mono'" font-size="9" fill="#94a3b8">title, credits</text>
+                  <text x="60" y="110" font-family="'JetBrains Mono'" font-size="9" fill="#94a3b8">difficulty_lvl</text>
+
+                  <!-- Relation Line -->
+                  <path d="M180 75 C 210 75, 210 110, 240 110" stroke="#00f2fe" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+
+                  <!-- Table 2: StudyPlan Schedule -->
+                  <rect x="230" y="70" width="140" height="100" rx="6" fill="#161b22" stroke="#7928ca" stroke-width="1.5"/>
+                  <rect x="230" y="70" width="140" height="24" rx="6" fill="#7928ca" opacity="0.8"/>
+                  <text x="300" y="87" font-family="'JetBrains Mono'" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">STUDY_SCHEDULE</text>
+                  <text x="240" y="110" font-family="'JetBrains Mono'" font-size="9" fill="#7928ca">FK course_id</text>
+                  <text x="240" y="130" font-family="'JetBrains Mono'" font-size="9" fill="#94a3b8">scheduled_date</text>
+                  <text x="240" y="150" font-family="'JetBrains Mono'" font-size="9" fill="#00f2fe">completion_pct</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-tags">
+                <span>Java</span>
+                <span>DBMS & SQL</span>
+                <span>Relational Schema</span>
+                <span>Productivity</span>
+              </div>
+              <h3 class="project-title">StudyPlan</h3>
+              <p class="project-description">
+                A smart academic schedule synthesizer and progress tracking system tailored for engineering students. 
+                Incorporates relational database schemas to dynamically divide syllabi, schedule review intervals, and meet exam deadlines.
+              </p>
+
+              <div class="project-features">
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Normalized relational database schema (3NF)</span>
+                </div>
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Automated syllabus pacing & revision interval calculator</span>
+                </div>
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Detailed completion metrics, query logs & progress charts</span>
+                </div>
+              </div>
+
+              <div class="project-footer">
+                <button class="btn btn-sm btn-primary open-modal-btn" data-project="studyplan">
+                  <span>Explore Deep Dive</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </button>
+                <a href="#contact" class="btn btn-sm btn-ghost">Discuss Architecture</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL SECTION -->
+    <section class="section terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Interactive CLI</span>
+          <h2 class="section-title">Siril's Interactive <span class="gradient-text">Console</span></h2>
+          <p class="section-subtitle">A live developer terminal showcasing my curiosity and problem-solving mindset. Type or click commands below.</p>
+        </div>
+
+        <div class="terminal-window glass-card" data-reveal>
+          <div class="terminal-titlebar">
+            <div class="terminal-dots">
+              <span class="t-dot close"></span>
+              <span class="t-dot minimize"></span>
+              <span class="t-dot maximize"></span>
+            </div>
+            <div class="terminal-title">siril-raj@aliet-engineer: ~ (zsh)</div>
+            <div class="terminal-actions">
+              <button class="t-action-btn" id="clear-term-btn" title="Clear Terminal">Clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-welcome">
+              <p class="term-dim">Welcome to Siril Raj's Interactive Developer Terminal [Version 2.0.0]</p>
+              <p class="term-dim">Type <span class="term-highlight">help</span> or click quick pills below to explore my profile.</p>
+            </div>
+            <div class="term-history" id="term-history"></div>
+            <div class="term-input-line">
+              <span class="term-prompt">siril@aliet:~$</span>
+              <input type="text" id="term-input" class="term-input" autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+
+          <!-- Quick Command Suggestions -->
+          <div class="terminal-quick-cmds">
+            <span class="quick-label">Try commands:</span>
+            <button class="cmd-pill" data-cmd="skills">skills</button>
+            <button class="cmd-pill" data-cmd="projects">projects</button>
+            <button class="cmd-pill" data-cmd="education">education</button>
+            <button class="cmd-pill" data-cmd="why-hire">why-hire</button>
+            <button class="cmd-pill" data-cmd="contact">contact</button>
+            <button class="cmd-pill" data-cmd="quote">quote</button>
+            <button class="cmd-pill" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in collaborating on software projects, internships, or engineering discussions? Reach out!</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Info Column -->
+          <div class="contact-info-card glass-card" data-reveal>
+            <h3>Let's build something remarkable.</h3>
+            <p>
+              Whether you are looking for an energetic Java developer, have a challenge for my problem-solving skills, 
+              or want to discuss database architectures, I'm always open to connecting!
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="item-text">
+                  <span class="label">Email Address</span>
+                  <a href="mailto:sirilraj.dev@gmail.com" class="value">sirilraj.dev@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="item-text">
+                  <span class="label">Location & Institution</span>
+                  <span class="value">Andhra Loyola Institute of Engg. & Tech, Vijayawada, AP</span>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+                </div>
+                <div class="item-text">
+                  <span class="label">Status</span>
+                  <span class="value text-success">Open for Summer & Semester Internships</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-dock">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="mailto:sirilraj.dev@gmail.com" class="social-btn" title="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card glass-card" data-reveal>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Project Collaboration / Internship Opportunity" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-code">&lt;</span>
+        <span class="brand-name">Siril Raj</span>
+        <span class="brand-code">/&gt;</span>
+        <span class="footer-divider">•</span>
+        <span>Andhra Loyola Institute of Engineering and Technology (ALIET)</span>
+      </div>
+      <div class="footer-right">
+        <p>© <span id="current-year">2026</span> Siril Raj. Crafted with passion & logic.</p>
+        <a href="#hero" class="back-to-top" title="Back to top" aria-label="Back to top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PROJECT DEEP DIVE MODAL -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true">
+    <div class="modal-dialog glass-card">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">&times;</button>
+      <div class="modal-content" id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
